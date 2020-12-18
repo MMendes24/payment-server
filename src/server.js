@@ -25,7 +25,9 @@ server.use((_, res, next) => {
 })
 server.use(bodyParser.json())
 server.use("/api", router)
-server.use(express.static(path.join(__dirname, "../build")))
+server.get("/", (req, res) => {
+    res.sendFile("doc.html", { root: __dirname })
+})
 
 server.get("*", (_, res) => {
     res.sendFile(path.resolve(__dirname, "../build/index.html"))

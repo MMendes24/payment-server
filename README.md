@@ -1,4 +1,4 @@
-# payment-server
+# Payment Processor Server
 
 Server for payment processor which can be found here: https://payment-processor-server.herokuapp.com/
 
